@@ -1,8 +1,9 @@
-from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.template import loader
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
-from .models import Choice,Question
+from django.views import generic
+
+from .models import Choice, Question
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
@@ -12,13 +13,6 @@ def index(request):
 # def detail(request, question_id):
 #     question = get_object_or_404(Question, pk=question_id)
 #     return render(request, "polls/detail.html", {"question": question})
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
-from django.views import generic
-
-from .models import Choice, Question
-
 
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
