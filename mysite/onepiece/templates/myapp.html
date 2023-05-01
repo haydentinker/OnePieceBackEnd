@@ -1,11 +1,35 @@
+{%load static%}
 <!DOCTYPE html>
 <html>
 <head>
-<h1>Welcome to my Django app!</h1>
+<h1>OPdle (One Piece Wordle)!</h1>
+<link rel="stylesheet" type="text/css" href="{% static 'myapp.css' %}">
 <head>
+    <br>
+    
 <body>
-<p>This is a basic template.</p>
-<p>{{character}}</p>
-<img src="{{source}}"> 
+    <h2>Guess Today's One Piece Character</h2>
+    <form action="/search/" method="get">
+        <input type="text" name="q" placeholder="Enter Character Name...">
+        <button type="submit">Search</button>
+      </form>
+<br>
+<div class="flex-container">
+    <div class = "flex-header">Name</div>
+    <div class = "flex-header">Occupation</div>
+    <div class = "flex-header">Affiliations</div>
+    <div class = "flex-header">Anime Debut</div>
+    <div class = "flex-header">Manga Debut</div>
+</div>
+<br>
+<div class="flex-container">
+    <div class="flex-item">{{character_name}}</div>
+    <div class ="flex-item">{{character_occupation}}</div>
+    <div class ="flex-item">{{character_affilation}}</div>
+    <div class= "flex-item">{{anime_debut}}</div>
+    <div class = "flex-item">{{manga_debut}}</div>
+</div>
+<p>
+</p>
 </body>
 </html>
