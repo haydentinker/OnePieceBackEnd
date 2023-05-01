@@ -10,7 +10,7 @@ def index(request):
 def detail(request, character_id):
     return HttpResponse(Character.objects.filter(id=character_id))
 
-def characterView(request):
-    character1=Character.objects.filter(id=1)
+def characterView(request,character_id):
+    character1=Character.objects.filter(id=character_id)
     url="https://static.wikia.nocookie.net/onepiece/images/b/b8/Koby_Anime_Post_Timeskip_Infobox.png/revision/latest?cb=20230227233927"
-    return render(request,'myapp.html',{"character":character1,"source":url})
+    return render(request,'myapp.html',{"character":character1.values("name"),"source":url})

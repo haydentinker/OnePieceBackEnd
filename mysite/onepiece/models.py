@@ -12,7 +12,7 @@ class Occupations(models.Model):
 class Character(models.Model):
     def __str__(self):
         return self.name
-    def __returnAll(self):
+    def returnAll(self):
         return [self.name,affiliations.name,occupations.name]
     name=models.CharField(max_length=50)
     manage_debut=models.IntegerField()
