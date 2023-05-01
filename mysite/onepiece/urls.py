@@ -4,6 +4,6 @@ from onepiece import views
 
 app_name = "onepiece"
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.characterView, name="characterView"),
     path("detail/<int:character_id>/",views.detail,name="detail")
 ]
