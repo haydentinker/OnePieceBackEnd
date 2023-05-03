@@ -6,7 +6,7 @@ from django.views import generic
 from .models import Choice, Question
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request,'index.html')
 
 #Short cut with the get object or 404 does the same thing as the detail function below
 #have to include from django.shortcuts import get_object_or_404, render
