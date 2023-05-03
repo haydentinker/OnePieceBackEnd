@@ -1,5 +1,5 @@
 # OnePieceBackEnd
-Backend for One Piece Wordle 
+One Piece Wordle 
 
 
 
