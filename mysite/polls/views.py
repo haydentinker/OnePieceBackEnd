@@ -5,6 +5,8 @@ from django.views import generic
 
 from .models import Choice, Question
 
+def react_app(request):
+    return render(request, 'react-js.html')
 def index(request):
     return render(request,'index.html')
 
