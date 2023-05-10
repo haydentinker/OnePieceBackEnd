@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
-
+from .serializers import CharacterSerializer
 from .models import Character
 def index(request):
     return HttpResponse("Hello, world. You're at the one piece index.")
@@ -21,3 +21,7 @@ def characterView(request,character_id):
     "anime_debut":character1.anime_debut,
     "manga_debut":character1.manage_debut}
     )
+
+class CharacterList(generics.ListAPIView):
+    queryset=Character.objects.all()
+    serializer_class=CharacterSerializer
