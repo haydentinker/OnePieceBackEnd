@@ -6,5 +6,5 @@ app_name = "onepiece"
 urlpatterns = [
     path("<int:character_id>/", views.characterView, name="characterView"),
     path("detail/<int:character_id>/",views.detail,name="detail"),
-    path('characters/',CharacterList.as_view(),name='character_list'),
+    path('characters/',views.CharacterList.as_view(),name='character_list'),
 ]
