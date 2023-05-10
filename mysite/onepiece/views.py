@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 
-from .models import Character,Affiliations,Occupations
+from .models import Character
 def index(request):
     return HttpResponse("Hello, world. You're at the one piece index.")
 
@@ -16,8 +16,8 @@ def characterView(request,character_id):
     print(character1)
     return render(request,'myapp.html',
     {"character_name":character1,
-    "character_occupation":character1.occupations.get(),
-    "character_affilation":character1.affiliations.get(),
+    "character_occupation":character1.occupations,
+    "character_affilation":character1.affiliations,
     "anime_debut":character1.anime_debut,
     "manga_debut":character1.manage_debut}
     )
