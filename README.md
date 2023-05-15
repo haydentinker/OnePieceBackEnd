@@ -1,6 +1,2 @@
-# OnePieceBackEnd
-One Piece Wordle 
-
-
-
-# Background image url: https://www.wallpaperflare.com/thousand-sunny-one-piece-manga-sky-water-nature-leisure-activity-wallpaper-sasq/download/3360x2100
+# One-Piece Back-end
+## Back-end repository for One-Piece Wordle. Built utilizing Django (Python) and SQL.
